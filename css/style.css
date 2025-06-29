@@ -131,17 +131,23 @@ nav .logo span {
 
 /* contact end  */
 /* home start  */
+
 .find-box {
     max-width: 1000px;
 }
 
-/* footer start */
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-
+.home-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(../image/urban-skyline-modern-buildings.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
+
+/* home end */
+/* footer start */
+
 
 .find-box,
 .subscribe-box {
@@ -190,6 +196,7 @@ nav .logo span {
 .btn-find:hover,
 .btn-subscribe:hover {
     background-color: #8b4b1e;
+    color: #fff;
 }
 
 .social-icons a {
