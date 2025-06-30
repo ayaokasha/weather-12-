@@ -50,10 +50,11 @@ function updateWeatherCards(data) {
     const isToday = index === 0;
 
     // For today, use current weather data if available
+
     const currentTemp =
-      isToday && data.current
-        ? Math.round(data.current.temp_c)
-        : Math.round((day.day.maxtemp_c + day.day.mintemp_c) / 2);
+  isToday && data.current
+    ? Math.round(data.current.temp_c)
+    : Math.round(day.day.maxtemp_c);
 
     const dayName = isToday
       ? "Today"
