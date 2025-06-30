@@ -149,3 +149,5 @@ document.head.appendChild(style);
 
 // Load weather data on page load
 fetchWeather();
+
+//

@@ -9,6 +9,16 @@ body {
     overflow-x: hidden;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.home-section {
+    flex: 1;
+}
+
 /* ~nav */
 nav a {
     text-decoration: none;
@@ -57,15 +67,17 @@ nav .logo span {
     font-weight: 200;
 }
 
+.navbar-toggler i {
+    color: #E78B48;
+    font-size: 30px;
+}
+
 /* ~nav end */
 /* form start */
 .contact-form {
     background-color: rgba(0, 0, 0, 0.4);
-    /* شفاف */
     border: 1px solid #E78B48;
     backdrop-filter: blur(5px);
-    /* بلور خفيف للخلفية */
-    -webkit-backdrop-filter: blur(5px);
 }
 
 .contact-form input,
@@ -364,6 +376,7 @@ nav .logo span {
     opacity: 0.6;
     pointer-events: none;
 }
+
 /* weather cards end  */
 /* footer start */
 
@@ -436,15 +449,35 @@ nav .logo span {
     background-color: #E78B48;
     color: #fff;
 }
+
 /* footer end */
 /* media query */
-@media (max-width: 1024px) {
-    .days-container {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    }
-}
 
 @media (max-width: 768px) {
+    nav .menu ul {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .menu.collapse.show {
+        position: absolute;
+        top: 70px;
+        right: 15px;
+        background-color: #14151d;
+        border: 1px solid #E78B48;
+        padding: 15px;
+        border-radius: 10px;
+        z-index: 999;
+        width: 200px;
+    }
+
+    .menu.collapse.show ul {
+        flex-direction: column !important;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
     .weather-container {
         padding: 25px;
         margin: 10px;
