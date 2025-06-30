@@ -77,25 +77,36 @@
     </nav>
 
 
-    <section class="home-section pt-5">
+    <section class="home-section pt-2">
         <div class="search">
             <div class="row ">
                 <div class="col-md-8 mx-auto gy-5">
                     <div class="find-box d-flex m-auto">
-                        <input type="email" class="form-control rounded-pill border-0 px-4"
+                        <input type="text" id="locationInput" class="form-control rounded-pill border-0 px-4"
                             placeholder="Find your Location..." />
-                        <button class="btn btn-find rounded-pill px-4 ms-2">find</button>
+                        <button class="btn btn-find rounded-pill px-4 ms-2" onclick="handleSearch()">find</button>
                     </div>
                 </div>
             </div>
-
         </div>
 
-        <div class="weather-sec" id="weatherSec">
-            <div class="row">
-
+        <div class="weather-container mx-auto" id="weatherContainer">
+            <div class="header">
+                <div class="location-header">
+                    <div class="location-name" id="locationName">Loading...</div>
+                    <div class="location-details" id="locationDetails">Getting your location...</div>
+                    <div class="current-time" id="currentTime"></div>
+                </div>
+                <button class="refresh-btn" onclick="fetchWeather()" id="refreshBtn">
+                    <img width="30" height="30"
+                        src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-refresh-100-most-used-icons-flaticons-flat-flat-icons-2.png"
+                        alt="external-refresh-100-most-used-icons-flaticons-flat-flat-icons-2" />
+                </button>
             </div>
-        </div>
+
+            <div class="days-container" id="daysContainer">
+                <!-- Weather cards will be populated here -->
+            </div>
     </section>
 
     <footer class="footer text-white py-5">
